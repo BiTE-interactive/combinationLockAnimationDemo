@@ -82,8 +82,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
         
         // generate a combination at random
         // for simplicity I have eliminated 0 from the possible choices
-        // let stops = Array(sequence(first: 1) { $0 + 1 }.prefix(9)).shuffled().prefix(6)
-        let stops = "7—9—6—1—5—2".split(separator: "—").map {Int($0)!}
+        let stops = Array(sequence(first: 1) { $0 + 1 }.prefix(9)).shuffled().prefix(6)
+        // let stops = "7—9—6—1—5—2".split(separator: "—").map {Int($0)!}
         
         // display the combination to the user
         self.combiLabel.text = stops.map(String.init).joined(separator: " — ")
